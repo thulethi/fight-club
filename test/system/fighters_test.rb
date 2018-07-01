@@ -15,6 +15,7 @@ class FightersTest < ApplicationSystemTestCase
     click_on "New Fighter"
 
     fill_in "Name", with: @fighter.name
+    fill_in "Picture", with: @fighter.picture
     fill_in "Strength", with: @fighter.strength
     click_on "Create Fighter"
 
@@ -27,6 +28,7 @@ class FightersTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Name", with: @fighter.name
+    fill_in "Picture", with: @fighter.picture
     fill_in "Strength", with: @fighter.strength
     click_on "Update Fighter"
 

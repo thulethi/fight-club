@@ -1,25 +1,4 @@
-
-
-<h1>Fighters List</h1>
-
-<% @fighters.in_groups_of(3) do |group| %>
-  <div class="row">
-    <% group.compact.each do |fighter| %>
-      <div class="col-md-4">
-        <%# <%= image_tag fighter.picture_url, width: '100%' if fighter.picture.present? %> %>
-        <h4><%= link_to fighter.name, fighter %></h4>
-        <h5>Strength : <%= fighter.strength %></h5>
-      </div>
-    <% end %>
-  </div>
-
-  <%= link_to 'New Fighter', new_fighter_path %>
-  
-<% end %>
-
-<%
-=begin %>
-<p id="notice"><%= notice</p> %>
+<p id="notice"><%= notice %></p>
 
 <h1>Fighters</h1>
 
@@ -28,6 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Strength</th>
+      <th>Picture</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -37,6 +17,7 @@
       <tr>
         <td><%= fighter.name %></td>
         <td><%= fighter.strength %></td>
+        <td><%= fighter.picture %></td>
         <td><%= link_to 'Show', fighter %></td>
         <td><%= link_to 'Edit', edit_fighter_path(fighter) %></td>
         <td><%= link_to 'Destroy', fighter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -47,6 +28,4 @@
 
 <br>
 
-
-<%
-=end %>
+<%= link_to 'New Fighter', new_fighter_path %>

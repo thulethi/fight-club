@@ -17,11 +17,6 @@ class FightersController < ApplicationController
     @fighter = Fighter.new
   end
 
-  # GET /fighters/newfight
-  def newfight
-    render "fighters/newfight"
-  end
-
   # GET /fighters/1/edit
   def edit
   end
@@ -74,6 +69,6 @@ class FightersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fighter_params
-      params.require(:fighter).permit(:name, :strength)
+      params.require(:fighter).permit(:name, :strength, :picture)
     end
 end

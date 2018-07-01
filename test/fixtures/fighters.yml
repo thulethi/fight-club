@@ -3,7 +3,9 @@
 one:
   name: MyString
   strength: 1
+  picture: MyString
 
 two:
   name: MyString
   strength: 1
+  picture: MyString
