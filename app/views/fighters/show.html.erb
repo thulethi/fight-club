@@ -12,7 +12,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @fighter.picture %>
+  <%= image_tag(@fighter.picture_url, width: 600) if @fighter.picture.present? %>
 </p>
 
 <%= link_to 'Edit', edit_fighter_path(@fighter) %> |

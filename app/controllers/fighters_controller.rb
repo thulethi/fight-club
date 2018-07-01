@@ -21,6 +21,9 @@ class FightersController < ApplicationController
   def newfight
     @fighters = Fighter.all
     render "fighters/newfight"
+    def fight_result()
+      
+    end
   end
 
   # GET /fighters/1/edit
