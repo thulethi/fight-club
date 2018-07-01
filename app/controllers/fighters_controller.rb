@@ -17,6 +17,12 @@ class FightersController < ApplicationController
     @fighter = Fighter.new
   end
 
+  # GET /fighters/newfight
+  def newfight
+    @fighters = Fighter.all
+    render "fighters/newfight"
+  end
+
   # GET /fighters/1/edit
   def edit
   end
