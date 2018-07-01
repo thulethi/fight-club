@@ -1,4 +1,25 @@
-<p id="notice"><%= notice %></p>
+
+
+<h1>Fighters List</h1>
+
+<% @fighters.in_groups_of(3) do |group| %>
+  <div class="row">
+    <% group.compact.each do |fighter| %>
+      <div class="col-md-4">
+        <%# <%= image_tag fighter.picture_url, width: '100%' if fighter.picture.present? %> %>
+        <h4><%= link_to fighter.name, fighter %></h4>
+        <h5>Strength : <%= fighter.strength %></h5>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to 'New Fighter', new_fighter_path %>
+  
+<% end %>
+
+<%
+=begin %>
+<p id="notice"><%= notice</p> %>
 
 <h1>Fighters</h1>
 
@@ -26,4 +47,6 @@
 
 <br>
 
-<%= link_to 'New Fighter', new_fighter_path %>
+
+<%
+=end %>
