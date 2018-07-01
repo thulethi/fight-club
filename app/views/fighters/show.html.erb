@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fighter.name %>
+</p>
+
+<p>
+  <strong>Strength:</strong>
+  <%= @fighter.strength %>
+</p>
+
+<%= link_to 'Edit', edit_fighter_path(@fighter) %> |
+<%= link_to 'Back', fighters_path %>
