@@ -1,19 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @fighter.name %>
-</p>
+<div class="row">
+  <div class="col-md-9">
+    <%= image_tag(@fighter.picture_url, width: '100%') if @fighter.picture.present? %>
+  </div>
 
-<p>
-  <strong>Strength:</strong>
-  <%= @fighter.strength %>
-</p>
-
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag(@fighter.picture_url, width: 600) if @fighter.picture.present? %>
-</p>
-
-<%= link_to 'Edit', edit_fighter_path(@fighter) %> |
-<%= link_to 'Back', fighters_path %>
+  <div class="col-md-3">
+    <p><b>Name: </b><%= @fighter.name %></p>
+    <p><b>Strength: </b><%= @fighter.strength %></p>
+    <p>
+      <%= link_to 'Edit', edit_fighter_path(@fighter) %> |
+      <%= link_to 'Delete', @fighter, data: { confirm: 'Are you sure?' }, method: :delete %> |
+      <%= link_to 'Back', fighters_path %>
+    </p>
+  </div>
+</div>
