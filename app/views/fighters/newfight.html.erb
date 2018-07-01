@@ -1,25 +1,32 @@
-<form>
-  <div class="form-group">
-    <label for="fighterSelect1">Fighter 1 select</label>
-    <select class="form-control" id="fighter1">
-      <% @fighters.each do |fighter| %>
-        <option><%= fighter.name %></option>
+<%= form_tag do %>
+  <div class="form-inline">
+    <div class="form-group mb-2">
+      <label for="fighterSelect1">Fighter 1:</label>
+      <%= select(:fighter1, :id, [], {}, { :class => 'form-control' }) do %>
+        <% @fighters.each do |fighter| -%>
+          <%= content_tag(:option, fighter.name, value: fighter.id) %>
+        <% end %>
       <% end %>
-    </select>
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="fighterSelect2">Fighter 2:</label>
+      <%= select(:fighter2, :id, [], {}, { :class => 'form-control' }) do %>
+        <% @fighters.each do |fighter| -%>
+          <%= content_tag(:option, fighter.name, value: fighter.id) %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="fighterSelect2">Fighter 2 select</label>
-    <select class="form-control" id="fighter2">
-      <% @fighters.each do |fighter| %>
-        <option><%= fighter.name %></option>
-      <% end %>
-    </select>
+  <%= submit_tag("Start!") %>
+
+  <% unless @fight_winner.nil? %>
+    <div>
+    <%= @fighter1.name %> fights with <%= @fighter2.name %><br>
+    <b>Winner: <%= @fight_winner.name %></b>
   </div>
-
-  <button onclick="fight_result()" type="submit" form="form1" value="Submit">Start</button>
-
-  <% unless @fight_result.nil? %>
-    <b><%= @fight_result %></b>
   <% end %>
-</form>
+
+<% end %> 
+
