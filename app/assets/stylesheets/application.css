@@ -14,7 +14,17 @@
  *= require_self
  */
 
- body { padding-top: 100px; }
-footer { margin-top: 100px; }
+body { 
+    padding-top: 60px;
+    font-size: 16px;
+    font-family: 'sans-serif', 'Oxygen';
+}
+
+footer { 
+    margin-top: 100px;
+    color: grey;
+}
+
 table, td, th { vertical-align: middle; border: none; }
+
 th { border-bottom: 1px solid #DDD; }
