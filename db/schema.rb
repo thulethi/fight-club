@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_07_01_152154) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "fighters", force: :cascade do |t|
     t.string "name"
     t.integer "strength"
