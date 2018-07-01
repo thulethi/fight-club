@@ -4,7 +4,7 @@
   <div class="row">
     <% group.compact.each do |fighter| %>
       <div class="col-md-4">
-        <%= image_tag fighter.picture_url, width: '100%' if fighter.picture.present? %>
+        <%= image_tag fighter.picture_url(:thumb) if fighter.picture.present? %>
         <h4><%= link_to fighter.name, fighter %></h4>
         <%= fighter.strength %>
       </div>
