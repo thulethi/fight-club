@@ -26,8 +26,8 @@ class FightersController < ApplicationController
   # POST /fighters/newfight
   def newfight_result
     @fighters = Fighter.all
-    @fighter1id = params["fighter1"]["id"]
-    @fighter2id = params["fighter2"]["id"]
+    @fighter1id = params[:fighter1][:id]
+    @fighter2id = params[:fighter2][:id]
     @fighter1 = Fighter.find(@fighter1id)
     @fighter2 = Fighter.find(@fighter2id)
     @fight_winner = pick_winner(@fighter1, @fighter2)
