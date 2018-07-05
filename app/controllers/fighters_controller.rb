@@ -44,6 +44,10 @@ class FightersController < ApplicationController
     return winner
   end
 
+  # GET /fighters/history
+  
+  # POST /fighters/history
+
   # GET /fighters/1/edit
   def edit
   end
