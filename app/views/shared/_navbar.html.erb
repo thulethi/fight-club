@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
+	<a class="navbar-brand" href="#">Fight Club</a>
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		<%# <span class="sr-only">Toggle navigation</span> 
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span> %>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul id="nav-list" class="nav navbar-nav">
+			<li class="nav-item <% if [params[:controller], params[:action]] == ['fighters', 'index'] %>active<% end %>"><%= link_to 'Fighters', fighters_path, class: "nav-link" %></li>
+			<li class="nav-item <% if [params[:controller], params[:action]] == ['products', 'newfight'] %>active<% end %>"><%= link_to 'New Fight', fighters_newfight_path, class: "nav-link" %></li>
+			<li class="nav-item"><%= link_to 'History', fighters_newfight_path, class: "nav-link" %></li>
+		</ul>
+	</div>
+</nav>
