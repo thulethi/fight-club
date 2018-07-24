@@ -1,11 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is inspired by the film "Fight Club" and other cinematic heroes with the questioned lying behind: "Who would win over whom in reality?"
 
-Things you may want to cover:
+* Features:
+  - Browse the list of all fighters
+  - Start a new fight with the winner output
+  - View the history of all matches
 
-* Ruby version
+* Ruby version: 
+  - Ruby 5.2
 
 * System dependencies
 
