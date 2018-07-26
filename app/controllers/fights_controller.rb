@@ -21,44 +21,27 @@ class FightsController < ApplicationController
   # POST /fights
   # POST /fights.json
   def create
-    # @fight = Fight.new(fight_params)
-
-    # respond_to do |format|
-    #   if @fight.save
-    #     format.html { redirect_to @fight, notice: 'Fight was successfully created.' }
-    #     format.json { render :show, status: :created, location: @fight }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @fight.errors, status: :unprocessable_entity }
-    #   end
-    # end
-  end
-
-  # GET /fighters/newfight
-  def newfight
-    @fighters = Fighter.all
-    render "fighters/newfight"
-  end
-
-  # POST /fighters/newfight
-  def newfight_result
     @fighters = Fighter.all
     @fighter1id = params[:fighter1][:id]
     @fighter2id = params[:fighter2][:id]
     @fighter1 = Fighter.find(@fighter1id)
     @fighter2 = Fighter.find(@fighter2id)
-    @fight_winner = pick_winner(@fighter1, @fighter2)
-    render "fighters/newfight"
+    @fight_winner, @fight_loser = resolve_fight(@fighter1, @fighter2)
+
+    @fight = Fight.new
+    @fight.winner = @fight_winner
+    @fight.loser = @fight_loser
+    @fight.save!
+
+    render "fights/new"
   end
 
-  def pick_winner(fighter1, fighter2)
-    winner =
-      if fighter1.strength >= fighter2.strength
-        fighter1
-      else
-        fighter2
-      end
-    return winner
+  def resolve_fight(fighter1, fighter2)
+    if fighter1.strength >= fighter2.strength
+      return fighter1, fighter2
+    else
+      return fighter2, fighter1
+    end
   end
 
   private
