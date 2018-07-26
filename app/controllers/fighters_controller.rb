@@ -4,7 +4,12 @@ class FightersController < ApplicationController
   # GET /fighters
   # GET /fighters.json
   def index
-    @fighters = Fighter.all
+    # @fighters = if params[:term]
+    #   Fighter.where('name LIKE ?', "%#{params[:term]}%")
+    # else
+    #   Fighter.all
+    # end
+    @fighters = Fighter.search(params[:term])
   end
 
   # GET /fighters/1
@@ -16,12 +21,6 @@ class FightersController < ApplicationController
   def new
     @fighter = Fighter.new
   end
-
-
-
-  # GET /fighters/history
-
-  # POST /fighters/history
 
   # GET /fighters/1/edit
   def edit
@@ -75,6 +74,6 @@ class FightersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fighter_params
-      params.require(:fighter).permit(:name, :strength, :picture)
+      params.require(:fighter).permit(:name, :strength, :picture, :term)
     end
 end
