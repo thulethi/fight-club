@@ -1,3 +1,18 @@
 // Place all the styles related to the fights controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.fight {
+  h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .form-inline {
+    margin-bottom: 20px;
+  }
+
+  div .form-group .mb-2 {
+    padding-right: 40px;
+  }
+}
