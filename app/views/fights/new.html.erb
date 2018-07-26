@@ -5,8 +5,9 @@
       <div class="form-group mb-2">
         <label for="fighterSelect1">Fighter 1:</label>
         <%= select(:fighter1, :id, [], {}, { :class => 'form-control' }) do %>
-          <% @fighters.each do |fighter| -%>
-            <%= content_tag(:option, fighter.name, value: fighter.id) %>
+          <% @fighters.each do |fighter| %>
+            <% sel = @fighter1.nil? ? false : fighter.id == @fighter1.id %>
+            <%= content_tag(:option, fighter.name, value: fighter.id, selected: sel) %>
           <% end %>
         <% end %>
       </div>
@@ -14,8 +15,9 @@
       <div class="form-group mx-sm-3 mb-2">
         <label for="fighterSelect2">Fighter 2:</label>
         <%= select(:fighter2, :id, [], {}, { :class => 'form-control' }) do %>
-          <% @fighters.each do |fighter| -%>
-            <%= content_tag(:option, fighter.name, value: fighter.id) %>
+          <% @fighters.each do |fighter| %>
+            <% sel = @fighter2.nil? ? false : fighter.id == @fighter2.id %>
+            <%= content_tag(:option, fighter.name, value: fighter.id, selected: sel) %>
           <% end %>
         <% end %>
       </div>
@@ -24,11 +26,12 @@
     <%= submit_tag("Start!") %> |
     <%= link_to 'Back', fights_path %>
 
-    <% unless @fight_winner.nil? %>
+    <% unless @fight_winner.nil? || @fight_loser.nil? %>
       <div>
-      <%= @fighter1.name %> fights with <%= @fighter2.name %><br>
-      <b>Winner: <%= @fight_winner.name %></b>
-    </div>
+        <br>
+        <p><%= @fighter1.name %> fights with <%= @fighter2.name %></p>
+        <p><b>Winner: <%= @fight_winner.name %></b></p>
+      </div>
     <% end %>
   <% end %>
 </div>

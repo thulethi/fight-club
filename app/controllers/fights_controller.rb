@@ -22,10 +22,10 @@ class FightsController < ApplicationController
   # POST /fights.json
   def create
     @fighters = Fighter.all
-    @fighter1id = params[:fighter1][:id]
-    @fighter2id = params[:fighter2][:id]
-    @fighter1 = Fighter.find(@fighter1id)
-    @fighter2 = Fighter.find(@fighter2id)
+    fighter1id = params[:fighter1][:id]
+    fighter2id = params[:fighter2][:id]
+    @fighter1 = Fighter.find(fighter1id)
+    @fighter2 = Fighter.find(fighter2id)
     @fight_winner, @fight_loser = resolve_fight(@fighter1, @fighter2)
 
     @fight = Fight.new
@@ -36,8 +36,18 @@ class FightsController < ApplicationController
     render "fights/new"
   end
 
+  # def resolve_fight(fighter1, fighter2)
+  #   if fighter1.strength >= fighter2.strength
+  #     return fighter1, fighter2
+  #   else
+  #     return fighter2, fighter1
+  #   end
+  # end
+
   def resolve_fight(fighter1, fighter2)
-    if fighter1.strength >= fighter2.strength
+    sum_strength = fighter1.strength + fighter2.strength
+    r = rand(sum_strength)
+    if r < fighter1.strength
       return fighter1, fighter2
     else
       return fighter2, fighter1
