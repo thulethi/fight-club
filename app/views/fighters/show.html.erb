@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-8">
     <%= image_tag(@fighter.picture_url, width: '100%') if @fighter.picture.present? %>
   </div>
 
-  <div class="col-md-3">
+  <div class="col-md-4">
     <p><b>Name: </b><%= @fighter.name %></p>
     <p><b>Strength: </b><%= @fighter.strength %></p>
     <p>
