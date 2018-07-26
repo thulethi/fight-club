@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Winner:</strong>
+  <%= @fight.winner.name %>
+</p>
+
+<p>
+  <strong>Loser:</strong>
+  <%= @fight.loser.name %>
+</p>
+
+<%= link_to 'Back', fights_path %>

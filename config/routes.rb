@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :fights, only: [:index, :show, :new, :create]
   root to: redirect('/fighters')
   get '/fighters/newfight', to: 'fighters#newfight'
   post '/fighters/newfight', to: 'fighters#newfight_result'

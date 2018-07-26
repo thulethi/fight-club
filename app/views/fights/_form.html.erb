@@ -1,0 +1,27 @@
+<%= form_with(model: fight, local: true) do |form| %>
+  <% if fight.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fight.errors.count, "error") %> prohibited this fight from being saved:</h2>
+
+      <ul>
+      <% fight.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :winner %>
+    <%= form.number_field :winner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loser %>
+    <%= form.number_field :loser %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
