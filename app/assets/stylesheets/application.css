@@ -81,10 +81,12 @@ th {
 nav ul {
   display: inline-block;
   list-style-type: none;
+  color: white;
 }
 
-li .nav-item {
+.nav-link {
   padding: 10px;
+  color: white;
 }
 
 nav a {
@@ -97,8 +99,9 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #dddddd;
-  color: black;
+  background-color: transparent;
+  color: gray;
+  text-decoration: none;
 }
 
 label {
@@ -106,5 +109,5 @@ label {
 }
 
 .navbar-form {
-  margin-top: 30px;
+  margin-top: 40px;
 }
