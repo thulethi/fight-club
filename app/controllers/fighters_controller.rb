@@ -17,35 +17,10 @@ class FightersController < ApplicationController
     @fighter = Fighter.new
   end
 
-  # GET /fighters/newfight
-  def newfight
-    @fighters = Fighter.all
-    render "fighters/newfight"
-  end
 
-  # POST /fighters/newfight
-  def newfight_result
-    @fighters = Fighter.all
-    @fighter1id = params[:fighter1][:id]
-    @fighter2id = params[:fighter2][:id]
-    @fighter1 = Fighter.find(@fighter1id)
-    @fighter2 = Fighter.find(@fighter2id)
-    @fight_winner = pick_winner(@fighter1, @fighter2)
-    render "fighters/newfight"
-  end
-
-  def pick_winner(fighter1, fighter2)
-    winner = 
-      if fighter1.strength >= fighter2.strength
-        fighter1
-      else
-        fighter2
-      end
-    return winner
-  end
 
   # GET /fighters/history
-  
+
   # POST /fighters/history
 
   # GET /fighters/1/edit

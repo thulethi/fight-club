@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
-  
+
   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -9,9 +9,9 @@
       <h1><%= image_tag "highkick.png", size: "100x100", class: "logo" %>FIGHT CLUB</h1>
     <% end %>
     <ul id="nav-list" class="nav navbar-nav mr-auto">
-      <li class="nav-item <% if [params[:controller], params[:action]] == ['fighters', 'index'] %>active<% end %>"><%= link_to 'Fighters', fighters_path, class: "nav-link" %></li>
-      <li class="nav-item <% if [params[:controller], params[:action]] == ['products', 'newfight'] %>active<% end %>"><%= link_to 'New Fight', fighters_newfight_path, class: "nav-link" %></li>
-      <li class="nav-item"><%= link_to 'History', fighters_newfight_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to 'Fighters', fighters_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to 'New Fight', new_fight_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to 'History', fights_path, class: "nav-link" %></li>
     </ul>
   <div class="col-sm-3 col-md-3 pull-right">
         <form class="navbar-form" role="search">
@@ -24,6 +24,4 @@
         </form>
         </div>
   </div>
-
-  
 </nav>
