@@ -10,4 +10,9 @@
   <%= @fight.loser.name %>
 </p>
 
+<p>
+  <strong>Time:</strong>
+  <%= @fight.created_at.strftime("%B %e, %Y at %I:%M %p") %>
+</p>
+
 <%= link_to 'Back', fights_path %>
