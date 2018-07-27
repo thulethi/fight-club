@@ -1,6 +1,6 @@
 # README
 
-![fighters_view](fighters/app/assets/images/readme.png)
+![fighters_view](/app/assets/images/readme.png)
 This application is inspired by the film "Fight Club" and other cinematic heroes with the questioned lying behind: "Who would win over whom in reality?"
 
 ## Features:
