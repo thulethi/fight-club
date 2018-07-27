@@ -36,14 +36,6 @@ class FightsController < ApplicationController
     render "fights/new"
   end
 
-  # def resolve_fight(fighter1, fighter2)
-  #   if fighter1.strength >= fighter2.strength
-  #     return fighter1, fighter2
-  #   else
-  #     return fighter2, fighter1
-  #   end
-  # end
-
   def resolve_fight(fighter1, fighter2)
     sum_strength = fighter1.strength + fighter2.strength
     r = rand(sum_strength)
