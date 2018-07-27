@@ -10,4 +10,4 @@ This application is inspired by the film "Fight Club" and other cinematic heroes
 * Ruby version: 
   - Ruby 5.2
 
-![fighter_index](app/assets/images/readme.png)
+![fighters_view](app/assets/images/readme.png)
