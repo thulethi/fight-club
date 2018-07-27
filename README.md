@@ -17,4 +17,3 @@ This application is inspired by the film "Fight Club" and other cinematic heroes
   - Ruby :: 2.5.1
   - Ruby on Rails :: 5.2.0
   - PostgreSQL :: 10.4
-  - Bootstrap :: 4.1.1
