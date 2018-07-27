@@ -16,7 +16,7 @@
     <div class="col-sm-3 col-md-3 pull-right">
       <%= form_tag(fighters_path, method: :GET, class: "navbar-form", id: "search-form") do %>
         <div class="form-in-line">
-          <%= text_field_tag :term, params[:term], placeholder: "Search fighter", class: "form-control" %>|
+          <%= text_field_tag :term, params[:term], placeholder: "Search fighter", maxlength: 20, class: "form-control" %>
           <%= button_tag("", name: nil, class: "btn btn-default button-round", type: "submit") do %>
             <i class="glyphicon glyphicon-search"></i>
           <% end %>

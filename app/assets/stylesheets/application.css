@@ -110,4 +110,13 @@ label {
 
 .navbar-form {
   margin-top: 40px;
+  padding: 0;
+  top: -1px;
+  float: right;
+  white-space: nowrap;
+  margin-left: 5px;
+}
+
+.form-control {
+  width: 80%;
 }
