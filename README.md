@@ -1,11 +1,21 @@
 # README
 
+![fighters_view](fighters/app/assets/images/readme.png)
 This application is inspired by the film "Fight Club" and other cinematic heroes with the questioned lying behind: "Who would win over whom in reality?"
 
-* Features:
+## Features:
   - Browse the list of all fighters
+<<<<<<< HEAD
   - Start a new fight with the winner output
   - View the history of all matches
+  - Search fighters on index page
+  - Add, update and delete fighters
+  - Start a new fight
+  - Output the fight result based on strength and luck element
+  - View the history of all fights
 
-* Ruby version: 
-  - Ruby 5.2
+## What is used
+  - Ruby :: 2.5.1
+  - Ruby on Rails :: 5.2.0
+  - PostgreSQL :: 10.4
+  - Bootstrap :: 4.1.1
