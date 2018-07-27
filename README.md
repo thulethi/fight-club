@@ -5,7 +5,6 @@ This application is inspired by the film "Fight Club" and other cinematic heroes
 
 ## Features:
   - Browse the list of all fighters
-<<<<<<< HEAD
   - Start a new fight with the winner output
   - View the history of all matches
   - Search fighters on index page
