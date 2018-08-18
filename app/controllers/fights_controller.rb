@@ -4,7 +4,7 @@ class FightsController < ApplicationController
   # GET /fights
   # GET /fights.json
   def index
-    @fights = Fight.all
+    @fights = Fight.all.paginate(page: params[:page], per_page: 10)
   end
 
   # GET /fights/1
