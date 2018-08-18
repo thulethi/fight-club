@@ -10,8 +10,6 @@ gem 'pg'
 # Use carrierwave for picture uploader
 gem 'carrierwave'
 gem 'mini_magick', '4.8.0'
-# Use will_paginate to implement pagination result set
-gem 'will_paginate'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
