@@ -1,7 +1,7 @@
 # README
 
 ![fighters_view](/app/assets/images/readme.png)
-This application is inspired by the film "Fight Club" and other cinematic heroes with the questioned lying behind: "Who would win over whom in reality?"
+This application is inspired by the film "Fight Club" and other cinematic heroes with the questioned lying behind: "Who would win over whom in reality?" Find out more here: https://arrogant-whistler-12006.herokuapp.com/fighters
 
 ## Features:
   - Browse the list of all fighters
